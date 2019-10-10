@@ -1,0 +1,9 @@
+package superKeyword;
+
+public class CourseInfo extends Student{
+
+	public void courseTitle(){
+		System.out.println("Java");
+		
+	}
+}

@@ -1,0 +1,25 @@
+package javaSorting;
+
+public class Binary_Serach {
+
+	public static void main(String[] args) {
+		int[] num={10,20,30,50,80};
+		int l=0,r=num.length,m,x=3;
+		while(l<r){
+			m=(l+r)/2;
+			if(num[x]>m){
+				l=m+1;
+			}
+			else{
+				r=m;
+			}
+			
+			
+			if(num[x]==m){
+				System.out.println("Found the Elemet Location : "+m);
+			}
+		}
+		
+	}
+
+}
