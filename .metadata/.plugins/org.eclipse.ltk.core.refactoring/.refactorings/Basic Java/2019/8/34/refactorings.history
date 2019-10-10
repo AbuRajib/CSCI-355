@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;javaCollection.A6_Dequeue&apos; to &apos;A6_Deque&apos;&#x0D;&#x0A;- Original project: &apos;Basic Java&apos;&#x0D;&#x0A;- Original element: &apos;javaCollection.A6_Dequeue&apos;&#x0D;&#x0A;- Renamed element: &apos;javaCollection.A6_Deque&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;A6_Dequeue&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;javaCollection{A6_Dequeue.java[A6_Dequeue" matchStrategy="1" name="A6_Deque" qualified="false" references="true" similarDeclarations="false" stamp="1566256021272" textual="false" version="1.0"/>
-</session>
