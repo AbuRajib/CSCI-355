@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS-355 Home Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="css/responsive.css" rel="stylesheet" media="screen">		
+		<script src="js/r.js"></script>
+		<script src="js/selec.js"></script>
+		<script src="js/writef.js"></script>
+		<script src="js/pp.js"></script>
+	<script>
+	function apiGrabber(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText)
+            var items = response.items;
+            //      
+           var output = '';
+            for(var i=0; i< items.length; i++){
+            output += '<input type="checkbox" value="items[i]"></input>' + items[i].title + "<br>" + " " + items[i].link + "<br>" + items[i].snippet + "<br>" + "<br>";
+        }
+        document.getElementById('smth').innerHTML = output;
+    //
+        }
+    };  
+        var x = document.getElementById("search").value;
+        xhttp.open("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBhLDeRAFyT2xSglvqsvRen27TZkOWAGhE&cx=005645619149688493265:gzl9qwdnheu&q="+x, true);
+        xhttp.send();
+    }
+	</script>		
+	</head>
+	<body>
+		
+		<div class="header_area">
+			<div class="column header">
+				<div class="logo floatleft fix">
+					<img src="img/queens_college.jpg" height=150 width=150 alt="" />
+				
+				</div>
+				<div class="mainmenu floatright">
+					<ul id="nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="">Course</a>
+							<ul>
+								<li><a href="https://www.zybooks.com/">ZyBook</a></li>
+								<li><a href="https://tophat.com/">TopHat</a></li>
+								<li><a href="https://tinyurl.com/CSCI355-Fall2019">Google Drive</a></li>
+								<li><a href="https://www.w3schools.com/">W3Schools</a></li>
+							</ul>
+						</li>
+						<li><a href="">Search</a>
+						<ul>
+								<li><a href="upload.html">Upload File</a></li>
+								<li><a href="google_API.html">Google API</a></li>
+						</ul>
+						</li>
+						<li><a href="">Browser</a>
+							<ul>
+								<li><a href="browser.html">Navigator</a></li>
+								<li><a href="browser.html">Window</a></li>
+								<li><a href="browser.html">Screen</a></li>
+								<li><a href="browser.html">Location</a></li>
+								<li><a href="browser.html">Geolocation</a></li>
+							</ul>
+						</li>
+						<li><a href="">About</a>
+							<ul>
+								<li><a href="about.html">Developer</a></li>
+								<li><a href="mailto:abc@example.com">Contact Us!</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+					
+				</div>
+			</div>
+		</div>	
+		<div style="clear:both"></div>
+	
+		<div class="maincontent_area fix">
+			<div class="column maincontent fix">
+				<div class="our_awesome_services fix">
+					<p> 
+						<input id="search" placeholder="Enter a search"></input>
+						<button onclick="apiGrabber()">Search</button>
+					</p>
+				<div id="smth"></div>
+				<div class="selectors">
+                    <button type="button" onclick="selectAll()">Select All Files</button>
+                    <button type="button" onclick="deselectAll()">Deselect All Files</button>
+                  </div>
+				</div>
+				<div class="promotions fix">
+					<div class="single_promo floatleft fix">
+						<i class="icon-tasks promo_icon"></i>
+						
+					</div>
+					
+					<div class="single_promo floatleft fix">
+						<i class="icon-picture promo_icon"></i>
+						
+						<div class="save">
+							<button type="button" onclick="writeJSON()">Export JSON</button>
+							<button type="button" onclick="writeCSV()">Export CSV</button>
+							<button type="button" onclick="writeXML()">Export XML</button>
+							<br><br>
+						  <a style="display: none; width: fit-content;" href="" id="a" download>File Download</a>
+						</div>
+					</div>
+
+					<div class="single_promo floatleft fix">
+						<i class="icon-truck promo_icon"></i>
+						
+					</div>					
+				</div>
+				
+				<div class="promotions fix">
+					<div class="single_promo floatleft fix">
+						<i class="icon-tasks promo_icon"></i>
+						
+					</div>
+					
+					<div class="single_promo floatleft fix">
+						<i class="icon-picture promo_icon"></i>
+						
+					</div>
+
+					<div class="single_promo floatleft fix">
+						<i class="icon-truck promo_icon"></i>
+						
+					</div>					
+				</div>
+				
+				<div class="promotions fix">
+					<div class="single_promo floatleft fix">
+						<i class="icon-tasks promo_icon"></i>
+						
+					</div>
+					
+					<div class="single_promo floatleft fix">
+						<i class="icon-picture promo_icon"></i>
+						
+					</div>
+
+					<div class="single_promo floatleft fix">
+						<i class="icon-truck promo_icon"></i>
+						
+					</div>	
+				</div>
+				
+				<div class="promotions fix">
+					<div class="single_promo floatleft fix">
+						<i class="icon-tasks promo_icon"></i>
+						
+					</div>
+					
+					<div class="single_promo floatleft fix">
+						<i class="icon-picture promo_icon"></i>
+						
+					</div>
+
+					<div class="single_promo floatleft fix">
+						<i class="icon-truck promo_icon"></i>
+						
+					</div>					
+				</div>
+			
+			</div>
+		</div>	
+
+		<div class="footer_bottom_area fix">
+			<div class="column footer_bottom fix">
+				<div class="copyright_text floatleft fix">
+					<p>&copy; Queens College, Computer Science Department</p>
+				</div>
+				<div class="powered_by floatright fix">
+					<p>Designed by Abu Ahamed Rajib</a></p>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/selectnav.min.js"></script>
+		<script type="text/javascript">
+			domready(function(){
+				selectnav('nav', {
+					label: '--- Navigation --- '
+				});
+				prettyPrint()
+			})
+		</script>		
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
